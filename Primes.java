@@ -2,6 +2,7 @@ public class Primes {
     public static void main(String[] args) {
         int n = Integer.parseInt(args[0]);
         int amountOfPrimes = 0;
+        System.out.println("Prime numbers up to " + n + ":");
         if (n >= 2) {
             System.out.println(2);
             amountOfPrimes++;
@@ -30,9 +31,8 @@ public class Primes {
             i += 2;
         }
 
-        double percent = 100.0 * amountOfPrimes / n;
-
+        int percent = (int) (100.0 * amountOfPrimes / n);
         System.out.println("There are " + amountOfPrimes + " primes between 2 and " + n +
-                " (" + (int) percent + "% are primes)");
+                " (" + percent + "% are primes)");
     }
 }
